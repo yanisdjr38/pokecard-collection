@@ -63,30 +63,32 @@ export default function CardList({ cards, onDeleteCard }) {
       {Object.entries(groupedBySet).map(([setName, cardsInSet]) => (
         <div key={setName} className="card-set">
           <h3>{setName}</h3>
-          <div className="card-grid">
-            {cardsInSet.map((card) => (
-              <div key={card.id} className="card-item">
-                <img
-                  src={card.image}
-                  alt={card.name}
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src =
-                      "https://via.placeholder.com/150x210?text=No+Image";
-                  }}
-                />
-                <p className="card-name">{card.name}</p>
-                <p style={{ fontSize: "0.8rem", color: "#777" }}>
-                  {card.rarity}
-                </p>
-                <button
-                  className="delete-btn"
-                  onClick={() => onDeleteCard(card.id)}
-                >
-                  🗑
-                </button>
-              </div>
-            ))}
+          <div className="set-container">
+            <div className="card-grid">
+              {cardsInSet.map((card) => (
+                <div key={card.id} className="card-item">
+                  <img
+                    src={card.image}
+                    alt={card.name}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src =
+                        "https://via.placeholder.com/150x210?text=No+Image";
+                    }}
+                  />
+                  <p className="card-name">{card.name}</p>
+                  <p style={{ fontSize: "0.8rem", color: "#777" }}>
+                    {card.rarity}
+                  </p>
+                  <button
+                    className="delete-btn"
+                    onClick={() => onDeleteCard(card.id)}
+                  >
+                    🗑
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       ))}
