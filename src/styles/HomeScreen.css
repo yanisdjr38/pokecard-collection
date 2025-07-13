@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom, #f0f6ff, #ffffff);
+  background: #ffd200;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
@@ -8,6 +8,22 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 20px;
+  border-radius: 12px;
+}
+
+.container-card {
+  max-width: 900px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #e33a29;
+  border-radius: 12px;
+}
+
+.container-news {
+  max-width: 900px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #e33a29;
   border-radius: 12px;
 }
 
@@ -24,8 +40,9 @@ body {
 
 .card-preview h2,
 .news-section h2 {
-  font-size: 1.2rem;
-  color: #444;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -60,7 +77,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #ffd400;
   color: white;
   padding: 10px 18px;
   border: none;
@@ -71,7 +88,7 @@ body {
 }
 
 .btn-secondary {
-  background-color: #e0e0e0;
+  background-color: white;
   color: #333;
   padding: 10px 18px;
   border: none;
@@ -81,7 +98,7 @@ body {
   font-size: 1rem;
 }
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #ffc700;
 }
 .btn-secondary:hover {
   background-color: #d0d0d0;
@@ -91,11 +108,18 @@ body {
   margin-top: 40px;
 }
 .news-box {
-  background-color: #f7f7f7;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   font-style: italic;
   color: #666;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.news-box img {
+  object-fit: fill;
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
 }

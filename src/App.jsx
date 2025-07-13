@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import CardForm from "./components/CardForm";
 import CardList from "./components/CardList";
 import HomeScreen from "./components/HomeScreen";
+import Navbar from "./components/NavBar";
 import "./styles/HomeScreen.css";
+import "./styles/Navbar.css"; // Assure-toi d'importer les styles
 
 export default function App() {
   const [cards, setCards] = useState(() => {
@@ -22,7 +24,7 @@ export default function App() {
   };
 
   return (
-    <div className="app">
+    <div className="app" style={{ paddingBottom: "80px" }}>
       {screen === "home" && (
         <HomeScreen
           cards={cards}
@@ -33,7 +35,6 @@ export default function App() {
 
       {screen === "form" && (
         <div style={{ padding: 20 }}>
-          <button onClick={() => setScreen("home")}>&larr; Back</button>
           <h2>Add a Pokémon Card</h2>
           <CardForm onAddCard={handleAddCard} />
         </div>
@@ -41,8 +42,6 @@ export default function App() {
 
       {screen === "collection" && (
         <div style={{ padding: 20 }}>
-          <button onClick={() => setScreen("home")}>&larr; Back</button>
-          <h2>Your Collection</h2>
           <CardList
             cards={cards}
             onDeleteCard={(id) =>
@@ -51,6 +50,9 @@ export default function App() {
           />
         </div>
       )}
+
+      {/* 🚀 Navigation */}
+      <Navbar onNavigate={setScreen} current={screen} />
     </div>
   );
 }
