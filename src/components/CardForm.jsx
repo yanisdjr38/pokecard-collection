@@ -89,7 +89,7 @@ export default function CardForm({ onAddCard }) {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Card name (e.g. Zekrom)"
+          placeholder="Card name (e.g. Pikachu)"
           value={name}
           onChange={(e) => {
             setName(e.target.value);

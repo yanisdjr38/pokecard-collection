@@ -19,7 +19,7 @@ const SET_OPTIONS = [
   { id: "base1", name: "Base Set" },
 ];
 
-export default function CardList({ cards, onDeleteCard }) {
+export default function CardList({ cards }) {
   const [search, setSearch] = useState("");
   const [setFilter, setSetFilter] = useState("");
 
@@ -76,16 +76,6 @@ export default function CardList({ cards, onDeleteCard }) {
                         "https://via.placeholder.com/150x210?text=No+Image";
                     }}
                   />
-                  <p className="card-name">{card.name}</p>
-                  <p style={{ fontSize: "0.8rem", color: "#777" }}>
-                    {card.rarity}
-                  </p>
-                  <button
-                    className="delete-btn"
-                    onClick={() => onDeleteCard(card.id)}
-                  >
-                    🗑
-                  </button>
                 </div>
               ))}
             </div>

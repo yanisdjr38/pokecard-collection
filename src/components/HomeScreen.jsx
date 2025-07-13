@@ -21,7 +21,6 @@ export default function HomeScreen({ cards, onAddClick, onViewCollection }) {
               latestCards.map((card) => (
                 <div key={card.id} className="card-box">
                   <img src={card.image} alt={card.name} />
-                  <p>{card.name}</p>
                 </div>
               ))
             )}
