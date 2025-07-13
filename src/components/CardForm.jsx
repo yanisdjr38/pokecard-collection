@@ -86,7 +86,6 @@ export default function CardForm({ onAddCard }) {
 
   return (
     <div className="card-form">
-      <h2>Add a Card</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

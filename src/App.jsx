@@ -35,7 +35,6 @@ export default function App() {
 
       {screen === "form" && (
         <div style={{ padding: 20 }}>
-          <h2>Add a Pokémon Card</h2>
           <CardForm onAddCard={handleAddCard} />
         </div>
       )}
